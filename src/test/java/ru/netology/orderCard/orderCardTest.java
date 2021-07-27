@@ -39,9 +39,4 @@ public class orderCardTest {
         driver.quit();
         driver = null;
     }
-
-    @Test
-    void shouldTestSomething() {
-        driver.get("http://localhost:7777/");
-    }
 }
