@@ -17,24 +17,21 @@ import static org.junit.Assert.assertEquals;
 
 public class orderCardTest {
 
-    private WebDriver
-            driver;
+    private WebDriver driver;
 
     @BeforeAll
     static void setUpAll() {
+        System.setProperty("webdriver.chrome.driver", "./win/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
     void setUp() {
-        ChromeOptions
-                options =
-                new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments( "--disable-dev-shm-usage" );
         options.addArguments( "--no-sandbox" );
         options.addArguments( "--headless" );
-        driver =
-                new ChromeDriver( options );
+        driver = new ChromeDriver( options );
         driver.get( "http://localhost:7777" );
 
 
