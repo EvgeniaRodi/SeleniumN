@@ -46,6 +46,10 @@ public class orderCardTest {
         driver = null;
     }
     @Test
+    void shouldTestSomething() {
+        driver.get("http://localhost:7777");
+    }
+    @Test
     void shouldTestSuccessOrderIfCorrectFilling() {
         driver.get("http://localhost:7777");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
