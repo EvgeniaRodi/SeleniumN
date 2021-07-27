@@ -46,15 +46,4 @@ public class orderCardTest {
     void shouldTestSomething() {
         driver.get("http://localhost:7777");
     }
-    @Test
-    void shouldTestSuccessOrderIfCorrectFilling() {
-        driver.get("http://localhost:7777");
-        List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Евгения Родионова");
-        elements.get(1).sendKeys("+79653560606");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button")).click();
-        String text = driver.findElement( By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
-    }
 }
