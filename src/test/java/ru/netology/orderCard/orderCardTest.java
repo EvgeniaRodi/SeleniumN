@@ -35,7 +35,7 @@ public class orderCardTest {
         options.addArguments( "--headless" );
         driver =
                 new ChromeDriver( options );
-        driver.get( "http://localhost:7777/" );
+        driver.get( "http://localhost:7777" );
 
 
     }
@@ -47,7 +47,7 @@ public class orderCardTest {
     }
     @Test
     void shouldTestSuccessOrderIfCorrectFilling() {
-        driver.get("http://localhost:7777/");
+        driver.get("http://localhost:7777");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Евгения Родионова");
         elements.get(1).sendKeys("+79653560606");
